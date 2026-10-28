@@ -52,7 +52,7 @@ function TerminalCard({ isDark }) {
     { prompt: '', text: '✓ Loading domains: AI/ML, Cloud, Web3, Security', delay: 1.0, color: 'text-google-green' },
     { prompt: '', text: '✓ 350+ developers connected', delay: 1.5, color: 'text-google-green' },
     { prompt: '~$', text: 'gdg events --upcoming', delay: 2.0 },
-    { prompt: '', text: '→ Solution Challenge 2025 — Ongoing Global Track', delay: 2.5, color: 'text-google-blue' },
+    { prompt: '', text: '→ Solution Challenge 2026 — Ongoing Global Track', delay: 2.5, color: 'text-google-blue' },
     { prompt: '', text: '→ Build With AI 2.0 Workshop — Upcoming', delay: 3.0, color: 'text-google-yellow' },
     { prompt: '~$', text: '█', delay: 3.5, cursor: true },
   ];

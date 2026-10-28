@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { ThemeProvider } from './ThemeContext';
 import Navbar from './components/Navbar';
@@ -50,7 +50,7 @@ function AnimatedRoutes() {
 export default function App() {
   return (
     <ThemeProvider>
-      <BrowserRouter>
+      <Router>
         <div className="min-h-screen flex flex-col">
           <Navbar />
           <main className="flex-1">
@@ -58,7 +58,7 @@ export default function App() {
           </main>
           <Footer />
         </div>
-      </BrowserRouter>
+      </Router>
     </ThemeProvider>
   );
 }

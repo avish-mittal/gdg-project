@@ -12,6 +12,9 @@ export const socialLinks = {
   chapter: 'https://gdg.community.dev/gdg-on-campus-poornima-university-jaipur-india/',
 };
 
+// Base URL helper for GitHub Pages compatibility
+const base = import.meta.env.BASE_URL || '/';
+
 // ── Official GDGoC Organizers (From Official GDG on Campus Poornima University Page) ──
 export const teamMembers = [
   {
@@ -21,7 +24,7 @@ export const teamMembers = [
     bio: 'GDGoC Organizer at Poornima University. Passionate about empowering student developers, orchestrating hackathons, and scaling the tech community.',
     gradient: 'from-google-blue to-blue-600',
     color: 'google-blue',
-    image: '/team/raghav.png?v=2',
+    image: `${base}team/raghav.png?v=2`,
     profileUrl: 'https://gdg.community.dev/u/raghav57/',
     github: 'https://github.com/gdg-poornima',
     linkedin: 'https://linkedin.com',
@@ -34,7 +37,7 @@ export const teamMembers = [
     bio: 'GDGoC Organizer at Google Developer Groups on Campus – Poornima University. Focused on technical innovation, workshops, and developer tracks.',
     gradient: 'from-google-red to-rose-600',
     color: 'google-red',
-    image: '/team/keshav.png?v=2',
+    image: `${base}team/keshav.png?v=2`,
     profileUrl: 'https://gdg.community.dev/u/mj8qcn/',
     github: 'https://github.com/gdg-poornima',
     linkedin: 'https://linkedin.com',
@@ -47,7 +50,7 @@ export const teamMembers = [
     bio: 'GDGoC Organizer at Poornima University. Leading student engagement, inclusive developer culture, and hands-on technical bootcamps on campus.',
     gradient: 'from-google-yellow to-amber-500',
     color: 'google-yellow',
-    image: '/team/devika.png?v=2',
+    image: `${base}team/devika.png?v=2`,
     profileUrl: 'https://gdg.community.dev/u/devika17/',
     github: 'https://github.com/gdg-poornima',
     linkedin: 'https://linkedin.com',

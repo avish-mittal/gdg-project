@@ -1,0 +1,181 @@
+@import "tailwindcss";
+
+/* ── Google Brand Colors ── */
+@theme {
+  --color-google-blue: #4285F4;
+  --color-google-red: #EA4335;
+  --color-google-yellow: #FBBC05;
+  --color-google-green: #34A853;
+  --color-dark-bg: #0a0a0f;
+  --color-dark-surface: #12121a;
+  --color-dark-card: #1a1a2e;
+  --color-dark-border: #2a2a3e;
+  --color-dark-text: #e4e4e7;
+  --color-dark-muted: #71717a;
+  --color-light-bg: #f8f9fc;
+  --color-light-surface: #ffffff;
+  --color-light-card: #ffffff;
+  --color-light-border: #e2e8f0;
+  --color-light-text: #1a1a2e;
+  --color-light-muted: #64748b;
+}
+
+/* ── Base Styles ── */
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Dark mode body */
+  body.dark {
+    background-color: var(--color-dark-bg);
+    color: var(--color-dark-text);
+  }
+
+  body.light {
+    background-color: var(--color-light-bg);
+    color: var(--color-light-text);
+  }
+}
+
+/* ── Utility Classes ── */
+@layer utilities {
+  .glass {
+    background: rgba(26, 26, 46, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .glass-light {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .glow-blue {
+    box-shadow: 0 0 20px rgba(66, 133, 244, 0.3), 0 0 60px rgba(66, 133, 244, 0.1);
+  }
+
+  .glow-multi {
+    box-shadow:
+      0 0 20px rgba(66, 133, 244, 0.15),
+      0 0 40px rgba(234, 67, 53, 0.1),
+      0 0 60px rgba(52, 168, 83, 0.1);
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #4285F4 0%, #EA4335 25%, #FBBC05 50%, #34A853 75%, #4285F4 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-shift 4s ease infinite;
+  }
+
+  .grid-pattern {
+    background-image:
+      linear-gradient(rgba(66, 133, 244, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(66, 133, 244, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .grid-pattern-light {
+    background-image:
+      linear-gradient(rgba(66, 133, 244, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(66, 133, 244, 0.06) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .google-border {
+    border-image: linear-gradient(135deg, #4285F4, #EA4335, #FBBC05, #34A853) 1;
+  }
+}
+
+/* ── Animations ── */
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* ── Terminal Styles ── */
+.terminal-window {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+}
+
+/* ── Scrollbar ── */
+body.dark ::-webkit-scrollbar {
+  width: 8px;
+}
+
+body.dark ::-webkit-scrollbar-track {
+  background: var(--color-dark-bg);
+}
+
+body.dark ::-webkit-scrollbar-thumb {
+  background: var(--color-dark-border);
+  border-radius: 4px;
+}
+
+body.dark ::-webkit-scrollbar-thumb:hover {
+  background: var(--color-dark-muted);
+}
+
+body.light ::-webkit-scrollbar {
+  width: 8px;
+}
+
+body.light ::-webkit-scrollbar-track {
+  background: var(--color-light-bg);
+}
+
+body.light ::-webkit-scrollbar-thumb {
+  background: var(--color-light-border);
+  border-radius: 4px;
+}
+
